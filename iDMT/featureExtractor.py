@@ -186,8 +186,3 @@ def findAvgBGR(dataset_PATH, dataset_name, numClasses):
 	return 1.0*BGR_sum/image_count
 
 ########################################################
-
-def readAndDisplayPickle(PATH):
-	print("Reading image dictionary...")
-	with(open(PATH, "rb")) as openfile:
-		print(pickle.load(openfile))

@@ -22,3 +22,9 @@ def displayImage(PATH, img, scale):
 	cv2.imshow(PATH,img)
 	cv2.waitKey(0)
 	cv2.destroyAllWindows()
+
+# reads and displays a pickle, which is a data storage format
+def readAndDisplayPickle(PATH):
+	print("Reading image dictionary...")
+	with(open(PATH, "rb")) as openfile:
+		print(pickle.load(openfile))
