@@ -191,37 +191,3 @@ def readAndDisplayPickle(PATH):
 	print("Reading image dictionary...")
 	with(open(PATH, "rb")) as openfile:
 		print(pickle.load(openfile))
-
-
-##########
-##### MAIN #####
-##########
-
-def main():
-	# modify this part if needed to change the dataset and/or model (or these could be given as arguments to main)
-	dataset_PATH = "/Users/berkkocabagli/Desktop/UCSB_Research_Summer2017/Datasets/256_ObjectCategories" 
-	AlexNetModel = "/Users/berkkocabagli/Desktop/UCSB_Research_Summer2017/Models/AlexNet/deploy.prototxt" 
-	AlexNetWeights = "/Users/berkkocabagli/Desktop/UCSB_Research_Summer2017/Models/AlexNet/bvlc_alexnet.caffemodel"
-
-	#Caltech256_avg = findAvgBGR(dataset_PATH, "Caltech-256", 256)
-	#mean Caltech-256 Blue-Green-Red values
-	#Caltech256_avg = np.array([ 129.25425895, 136.19531139, 141.03170974]) # without the clutter folder
-	Caltech256_avg = np.array([ 128.78144029, 136.06747341, 140.76367044]) # all dataset
-
-	#createClassDictionary(dataset_PATH,"Caltech-256", 256)
-	#getFeatureVectors(dataset_PATH,"Caltech-256", 256, Caltech256_avg, "AlexNet", AlexNetModel, AlexNetWeights,"fc6", 4096, 227,227)
-
-	#mysum=0
-	#for dict_path in glob.glob("./FeatureVectors/fc6"+"/*"):
-	#	with(open(dict_path, "rb")) as openfile:
-	#		image_dict_for_current_class = pickle.load(openfile)
-		#print(image_dict_for_current_class)
-	#	mysum += len(image_dict_for_current_class)
-	#	print(len(image_dict_for_current_class))
-	#print(mysum)
-
-if __name__ == '__main__':
-   main()
-
-
-    
